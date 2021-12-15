@@ -90,7 +90,7 @@ main.div {
 .sixth img {
     width: 100%;
     height: 100%;
-    transition: all 2s ease 0s;
+    /* transition: all 2s ease 0s; non necessario perchè immediata la transizione */
 }
 
 .sixth {
@@ -98,10 +98,10 @@ main.div {
     height: 200px;
 }
 
-.sixth:hover {
+.sixth img:hover {
     filter: grayscale(1);
 }
-/* effetti sesta riga  */
+/* effetti settima riga  */
 .seventh img {
     width: 100%;
     height: 100%;
@@ -115,4 +115,223 @@ main.div {
 
 .seventh:hover {
     filter: sepia(1);
+}
+/* effetti ottava riga  */
+.eight img {
+    width: 100%;
+    height: 100%;
+}
+
+.eight {
+    transition: all 2s ease 0s;
+    width: 300px;
+    height: 200px;
+}
+
+.eight:hover {
+    filter: sepia(1);
+    border-radius: 20px;
+    overflow: hidden;
+}
+/* effetti nona riga  */
+.nineth img {
+    width: 300px;
+    height: 200px;
+    transition: all 2s ease 0s;
+    margin: 100px 200px;
+}
+
+.nineth {
+    width: 100%;
+    height: 450px;
+}
+
+.nineth img:hover {
+    filter: sepia(1);
+    border-radius: 20px;
+    overflow: hidden;
+    transform: scale(2,2);
+}
+
+/* effetti decima riga  */
+.ten i {
+   font-size: 50px;
+   animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+   
+/* effetti undicesima riga  */
+.eleven i {
+   font-size: 50px;
+}
+
+.eleven i:hover {
+    animation: spin 2s linear;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/*effetti dodicesima riga*/
+.twelve .button {
+    border: 5px solid black;
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+ .twelve .twelve-top {
+     height: 10px;
+     width: 20px;
+     position: absolute;
+     left: 10px;
+     top: -10px;
+     background-color: #f5f5f5;
+ }
+
+ .twelve .twelve-bottom {
+     height: 10px;
+     width: 20px;
+     position: absolute;
+     right: 10px;
+     bottom: -10px;
+     background-color: #f5f5f5;
+ }
+
+.twelve .button:hover .twelve-top {
+    animation: muovititop 2s linear;
+ }
+
+ @keyframes muovititop {
+    0% {
+        left: 10px;
+    }
+    50% {
+        left: calc(100% - 20px);
+    }
+    100% {
+        left: 10px;
+    }
+}
+
+.twelve .button:hover .twelve-bottom {
+    animation: muovitibottom 2s linear;
+ }
+
+ @keyframes muovitibottom {
+    0% {
+       right: 10px;
+    }
+    50% {
+        right: calc(100% - 20px);
+    }
+    100% {
+        right: 10px;
+    }
+}
+/*effetti tredicesima riga*/
+.thirteen .button {
+    border: 5px solid black;
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+ .thirteen .thirteen-top {
+     height: 10px;
+     width: 20px;
+     position: absolute;
+     left: 10px;
+     top: -10px;
+     background-color: #f5f5f5;
+ }
+
+ .thirteen .thirteen-bottom {
+     height: 10px;
+     width: 20px;
+     position: absolute;
+     right: 10px;
+     bottom: -10px;
+     background-color: #f5f5f5;
+ }
+
+.thirteen .button:hover .thirteen-top {
+    animation: muovititopsecond 2s linear;
+}
+
+ @keyframes muovititopsecond {
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(100% - 10px);
+        top: -10px;
+    }
+    45% {
+        left: calc(100% - 10px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+.thirteen .button:hover .thirteen-bottom {
+    animation: muovitibottomsecond 2s linear;
+ }
+
+ @keyframes muovitibottomsecond {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    30% {
+        right: calc(100% - 10px);
+        bottom: -10px;
+    }
+    45% {
+        right: calc(100% - 10px);
+        bottom: 100%;
+    }
+    75% {
+        right: 0;
+        bottom: 100%;
+    }
+    90% {
+        right: -15px;
+        bottom: -10px;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
+    }
 }
